@@ -11,12 +11,12 @@ const presenceGlobeConfig: COBEOptions = {
   phi: 0,
   theta: 0.3,
   dark: 0,
-  diffuse: 0.45,
+  diffuse: 1.2,
   mapSamples: 16000,
-  mapBrightness: 1.15,
-  baseColor: [0.93, 0.95, 0.98],
-  markerColor: [0.93, 0.59, 0.08],
-  glowColor: [0.82, 0.87, 0.96],
+  mapBrightness: 6,
+  baseColor: [0.08, 0.14, 0.24],
+  markerColor: [1, 0.58, 0.08],
+  glowColor: [0.12, 0.2, 0.34],
   markers: [
     { location: [-22.9068, -43.1729], size: 0.1 }, // Rio de Janeiro
     { location: [-23.5505, -46.6333], size: 0.1 }, // São Paulo
@@ -53,11 +53,11 @@ export function Regions() {
             </p>
           ) : null}
 
-          <div className="relative mt-8 aspect-square max-w-md overflow-hidden rounded-3xl border border-border bg-[#f3f5f8] shadow-sm">
-            <Globe config={presenceGlobeConfig} className="-inset-[8%] max-w-none" />
-            <div className="pointer-events-none absolute inset-x-5 bottom-5 flex items-center justify-between rounded-2xl border border-white/80 bg-white/85 px-4 py-3 text-xs font-semibold text-foreground shadow-sm backdrop-blur-sm">
-              <span>Sudeste + Nordeste</span>
-              <span className="text-muted-foreground">10 estados</span>
+          <div className="relative mt-8 aspect-[1.08] max-w-md overflow-hidden rounded-3xl border border-slate-700/80 bg-[#091222] shadow-[0_18px_45px_-24px_rgba(9,18,34,0.7)]">
+            <Globe config={presenceGlobeConfig} className="-inset-[5%] max-w-none" />
+            <div className="pointer-events-none absolute inset-x-5 bottom-5 flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/75 px-4 py-3 text-xs font-semibold text-white shadow-lg backdrop-blur-sm">
+              <span className="inline-flex items-center gap-2"><span className="size-2 rounded-full bg-brand" /> Sudeste + Nordeste</span>
+              <span className="text-slate-300">10 estados</span>
             </div>
           </div>
         </div>
